@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RequestJoke from './RequestJoke/RequestJoke';
 import SuperheroCreateForm from './SuperheroCreateForm/SuperheroCreateForm';
 import SuperheroTable from './SuperheroTable/SuperheroTable';
 
@@ -20,6 +21,7 @@ class App extends Component {
             <div>
                 <SuperheroCreateForm addHeroTable={this.addHeroTable} />
                 <SuperheroTable heroTable={this.heroArray.superheroes} />
+                <RequestJoke />
             </div>
         )
     }
