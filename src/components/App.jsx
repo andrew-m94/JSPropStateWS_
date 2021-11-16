@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SuperheroCreateForm from './SuperheroCreateForm/SuperheroCreateForm';
-import SuperheroTable from '../SuperheroTable/SuperheroTable';
+import SuperheroTable from './SuperheroTable/SuperheroTable';
 
 class App extends Component {
     constructor(props) {
