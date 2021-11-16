@@ -21,23 +21,24 @@ class SuperheroCreateForm extends Component {
         let errors = this.state.errors;
 
         switch(event.target.name){
-            case 'unique_id':
-                errors.uniqueId = event.target.value.length < 0 ? "Please enter Unique Id" : null;
+            case 'uniqueId':
+                errors.uniqueId = event.target.value.length < 1 ? "Please enter Unique Id" : null;
                 break;
-            case 'superhero_name':
-                errors.superheroName = event.target.value.length < 0 ? "Please enter Superhero Name" : null;
+            case 'superheroName':
+                errors.superheroName = event.target.value.length < 1 ? "Please enter Superhero Name" : null;
                 break;
-            case 'primary_ability':
-                errors.primaryAbility = event.target.value.length < 0 ? "Please enter Primary Ability" : null
+            case 'primaryAbility':
+                errors.primaryAbility = event.target.value.length < 1 ? "Please enter Primary Ability" : null
                 break;
-            case 'secondary_ability':
-                errors.secondaryAbility = event.target.value.length < 0 ? "Please enter Secondary Ability" : null
+            case 'secondaryAbility':
+                errors.secondaryAbility = event.target.value.length < 1 ? "Please enter Secondary Ability" : null
                 break;
             default:
                 break;
         }
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
+            errors: errors
         })
     }
 
